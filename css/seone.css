@@ -1,5 +1,8 @@
-
-
 .w-25 {
     margin-left: 20px;
+}
+
+.width100 {
+    width: 100%;
+    margin: 3.86px 0;
 }
