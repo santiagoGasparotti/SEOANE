@@ -4,5 +4,9 @@
 
 .width100 {
     width: 100%;
-    margin: 3.86px 0;
+    margin: 3.62px 0;
+}
+
+.button{
+    color: #E06DAD;
 }
