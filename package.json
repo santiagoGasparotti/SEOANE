@@ -1,0 +1,24 @@
+{
+  "name": "seoane",
+  "version": "1.0.0",
+  "description": "Sitio web de una joyería",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "purgecss --css css/seoane.css --content index.html -o css/reducido.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiagoGasparotti/SEOANE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiagoGasparotti/SEOANE/issues"
+  },
+  "homepage": "https://github.com/santiagoGasparotti/SEOANE#readme"
+}
