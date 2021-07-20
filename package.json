@@ -1,16 +1,17 @@
 {
-  "name": "seoane1",
+  "name": "seoane",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/custom.scss css/custom.css",
+    "watch-css": "nodemon -e scss -x \"npm     run build-css\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/santiagoGasparotti/SEOANE.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/santiagoGasparotti/SEOANE#readme",
   "dependencies": {
-    "bootstrap": "^5.0.2"
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
   }
 }

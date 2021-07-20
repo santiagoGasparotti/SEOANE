@@ -1,0 +1,41 @@
+.width100 {
+    width: 100%;
+    margin: 3.62px 0;
+  }
+  
+  .button {
+    background-color: #E06DAD;
+  }
+  
+  div h3 {
+  background-color: red;
+  }
+
+  $primary:#e8c5d8;
+
+  div.navbar__right {
+    display: flex;
+    position: relative;
+    font-size: 1rem;
+    
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+@media only screen and (max-width:400px) {
+    .width {  width: 268px;
+
+    }
+}
+
+
+
+// .width{
+//     width: 168px;
+// }
+
+
+.navbar-brand{
+    padding: 0;
+    margin: 0;
+}
