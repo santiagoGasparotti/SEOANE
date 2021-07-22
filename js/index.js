@@ -11,3 +11,13 @@ let carnet = "Codigo: "+codigo+ " "+
             "Domicilio: "+domicilio;
 
 console.log(carnet)
+
+
+let registroUsuario = prompt("ingresa nombre de usuario");
+
+if (registroUsuario == "") {
+    alert("No Ingresaste el nombre de usuario, no podemos registrarte, necesitas ingresar un nombre de usuario.")
+}
+else {
+    alert("¡Registro exitoso! Su nombre de usuario es: " + registroUsuario);
+}
