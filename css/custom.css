@@ -22,3 +22,19 @@ div.navbar__right {
 .navbar-brand {
   padding: 0;
   margin: 0; }
+
+.logo {
+  background-color: #ebebeb;
+  padding-top: 130px;
+  padding-bottom: 130px; }
+
+@media (min-width: 992px) {
+  .tall-100 {
+    height: 100vh; } }
+
+.photoSize {
+  height: 110px;
+  width: 100px; }
+
+.cardPading {
+  padding: 90px 0; }

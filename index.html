@@ -2,51 +2,54 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/custom.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>SEOANE</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/custom.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>SEOANE</title>
 </head>
 
 <body>
 
-    
-    <nav class=" navbar navbar-expand-lg navbar-light" style="background-color: #e8c5d8;" >
-        <div class="container-fluid ">
-          <a class="navbar-brand " href="#"><img src="img/SJ4.svg" alt="" class="w-75"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav  me-auto mb-2 mb-lg-0 ">
-              <li class="nav-item ">
-                <a class="nav-link active " aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active " href="#">Nosotros</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link active" href="presupuesto.html" tabindex="-1" aria-disabled="true">Presupuesto</a>
-              </li>
+  <nav class=" navbar navbar-expand-lg navbar-light" style="background-color: #ffffff;">
+    <div class="container-fluid ">
+      <a class="width" href="index.html"><img src="img/SJ4.svg" alt="" class="w-75"></a>
+      <div class="navbar__right">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav  me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item ">
+              <a class="nav-link active " aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " href="#">Nosotros</a>
+            </li>
 
-            </ul>
-            <form class="d-flex" >
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
-              <button class="btn btn-outline-dark" type="submit" >Buscar</button>
-            </form>
-          </div>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="presupuesto.html" tabindex="-1" aria-disabled="true">Presupuesto</a>
+            </li>
+
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -83,12 +86,207 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div> -->
+
+  <div class="container-fluid text-center logo">
+    <img src="img/SJ2.svg" alt="">
+  </div>
+
+  <div class="container cardPading">
+    <class class="row">
+
+      <!-- columna left -->
+
+      <div class=" col-lg-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <img class="photoSize" src="img/photo4.jpg" alt="">
+              <div class="ps-3">
+                <h6 class="m-0">
+                Presupuesto sin cargo
+                </h6>
+              </div>
+            </div>
+            <p class="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eius?</p>
+          </div>
+
+        </article>
+
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-    <script src="js/index.js"></script>
+      <!-- columna midle -->
+
+      <div class=" col-lg-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <img class="photoSize" src="img/photo4.jpg" alt="">
+              <div class="ps-3">
+                <h6 class="m-0">
+                  Envíos
+                </h6>
+              </div>
+            </div>
+            <p class="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eius?</p>
+          </div>
+
+        </article>
+
+      </div>
+
+      <!-- columna right -->
+
+      <div class=" col-lg-4">
+        <article class="card h-100">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <img class="photoSize" src="img/photo4.jpg" alt="">
+              <div class="ps-3">
+                <h6 class="m-0">
+                  Tarjetas
+                </h6>
+              </div>
+            </div>
+            <p class="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eius?</p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </class>
+  </div>
+
+  <div class="container-fluid text-center background p-2 mb-5">
+  <h1>Categorías</h1>
+</div>
+
+  <main class="container d-flex align-items-center justify-content-center tall-100">
+    <div class="row">
+
+      <!-- columna izquierda -->
+
+      <div class="col-12 col-lg-9">
+        <div class="row">
+          <div class="col-12 col-lg-8 p-2">
+            <article class="card h-100" style="background-color: #F2F4F4;">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <img class="photoSize border border-4 rounded-start" src="img/photo1.jpg" alt="">
+                  <div class="ps-3">
+                    <h6 class="m-0">Dano Aasass</h6>
+                    <p class="m-0">Lorem, ipsum.</p>
+                  </div>
+                </div>
+                <div>
+                  <p class="h6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum tenetur accusamus
+                    ipsam
+                    voluptatum mollitia. Vitae voluptatem nulla maiores quibusdam in.</p>
+                  <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit eaque
+                    repellendus
+                    quisquam. Laboriosam, repellat.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-lg-4 p-2">
+            <article class="card h-100" style="background-color: #E5E8E8;">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <img class="photoSize border border-4 rounded-start" src="img/photo2.jpg" alt="">
+                  <div class="ps-3">
+                    <h6 class="m-0">Dano Aasass</h6>
+                    <p class="m-0">Lorem, ipsum.</p>
+                  </div>
+                </div>
+                <div>
+                  <p class="h6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum tenetur accusamus
+                    ipsam
+                    voluptatum mollitia. Vitae voluptatem nulla maiores quibusdam in.</p>
+                  <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit eaque
+                    repellendus
+                    quisquam. Laboriosam, repellat.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-lg-4 p-2">
+            <article class="card h-100" style="background-color: #CCD1D1;">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <img class="photoSize border border-4 rounded-start" src="img/photo3.jpg" alt="">
+                  <div class="ps-3">
+                    <h6 class="m-0">Dano Aasass</h6>
+                    <p class="m-0">Lorem, ipsum.</p>
+                  </div>
+                </div>
+                <div>
+                  <p class="h6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum tenetur accusamus
+                    ipsam
+                    voluptatum mollitia. Vitae voluptatem nulla maiores quibusdam in.</p>
+
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-lg-8 p-2">
+            <article class="card h-100" style="background-color: #B2BABB;">
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <img class="photoSize border border-4 rounded-start" src="img/photo4.jpg" alt="">
+                  <div class="ps-3">
+                    <h6 class="m-0">Dano Aasass</h6>
+                    <p class="m-0">Lorem, ipsum.</p>
+                  </div>
+                </div>
+                <div>
+                  <p class="h6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum tenetur accusamus
+                    ipsam
+                    voluptatum mollitia. Vitae voluptatem nulla maiores quibusdam in.</p>
+                  <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit eaque
+                    repellendus
+                    quisquam. Laboriosam, repellat.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- columna derecha -->
+
+      <div class="col-12 col-lg-3 p-2">
+        <article class="card h-100 " style="background-color: #99A3A4;">
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <img class="photoSize border border-4 rounded-start" src="img/photo5.jpg" alt="">
+              <div class="ps-3">
+                <h6 class="m-0">Dano Aasass</h6>
+                <p class="m-0">Lorem, ipsum.</p>
+              </div>
+            </div>
+            <div>
+              <p class="h6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum tenetur accusamus ipsam
+                voluptatum mollitia. Vitae voluptatem nulla maiores quibusdam in.</p>
+              <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit eaque
+                repellendus
+                quisquam. Laboriosam, repellat.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
