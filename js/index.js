@@ -109,40 +109,61 @@
 //     alert("Encantados de conocerte " + nombreIngresado + ", que disfrutes de nuestro sitio web");
 // } 
 
-function suma(primerNumero, segundoNumero)
-{
-    return primerNumero + segundoNumero
-}
+const suma = (primerNumero, segundoNumero) => primerNumero + segundoNumero
 
-function resta(primerNumero, segundoNumero)
-{
-    return primerNumero - segundoNumero
-}
+// function suma(primerNumero, segundoNumero)
+// {
+//     return primerNumero + segundoNumero
+// }
 
-function multiplicar(primerNumero, segundoNumero)
-{
-    return primerNumero * segundoNumero
-}
+const resta = (primerNumero, segundoNumero) => primerNumero - segundoNumero
 
-function dividir(primerNumero, segundoNumero)
-{
-    return primerNumero / segundoNumero
-}
+// function resta(primerNumero, segundoNumero)
+// {
+//     return primerNumero - segundoNumero
+// }
+
+const multiplicar = (primerNumero, segundoNumero) => primerNumero * segundoNumero
+
+// function multiplicar(primerNumero, segundoNumero)
+// {
+//     return primerNumero * segundoNumero
+// }
+
+const dividir = (primerNumero, segundoNumero) => primerNumero / segundoNumero
+
+// function dividir(primerNumero, segundoNumero)
+// {
+//     return primerNumero / segundoNumero
+// }
+
+const iva = primerNumero => ((primerNumero * 0.21) + primerNumero)
+
+// let nuevoPrecio = resta(suma(resultadoIva, iva(primerNumero)), precioDescuento); 
+// console.log(nuevoPrecio);
+
+const total = (primerNumero, resultadoIva) => primerNumero + resultadoIva
 
 function mostrar(mensaje, resultado)
 {
     console.log(mensaje, resultado)
 }
 
+// function pedirNumeroUno(numero)
+// {
+//     numero = Number(prompt("Ingrese un valor, seguido de enter ingrese otro valor para realizar la ecuacion: "))
+//     return numero
+// }
+
 function pedirNumeroUno(numero)
 {
-    numero = Number(prompt("Ingrese un valor, seguido de enter ingrese otro valor para realizar la ecuacion: "))
+    numero = Number(prompt("Ingrese el monto de su factura para indicarle el valor final mas IVA : "))
     return numero
 }
 
 function pedirNumeroDos(numero)
 {
-    numero = Number(prompt("Ingrese aqui el siguien valor para luego elegir la ecuacion"))
+    numero = Number(prompt("Ingrese la palabra *total* para sumar la factura mas el iva"))
     return numero
 }
 
@@ -150,16 +171,25 @@ let respuesta
 
 do{
 
-    console.log("numeros para la ecuacion: ")
+    console.log("Precio de factura mas IVA: ")
     numeroA = pedirNumeroUno()
-    numeroB = pedirNumeroDos()
+    
+    // let operacion = prompt("Operaciones que puede realizar, elija una de ellas: suma, resta, multiplicar o dividir")     
+    let operacion = prompt("Ingrese la palabra *iva* para confirmar la operacion")     
 
-    let operacion = prompt("Operaciones que puede realizar, elija una de ellas: suma, resta, multiplicar o dividir")
-
+    // numeroB = pedirNumeroDos()
 
 switch(operacion)
 
 {
+    case "iva":
+        let resultadoIva = iva (numeroA)
+        mostrar("Su factura mas IVA es un total de: " ,resultadoIva)
+        break;
+    case "total":
+         let resultadoFinal = (primerNumero, resultadoIva)
+        mostrar("precio final ",final)
+        break;
     case "suma":
         let resultadoSuma = suma (numeroA, numeroB)
         mostrar("El resultado de la suma es: ", resultadoSuma)
@@ -178,7 +208,5 @@ switch(operacion)
         break;
 }
 
-respuesta = prompt("¿Desea continuar? *si* para seguir/*no* para cerrar")
+respuesta = prompt("¿Desea realizar otra consulta de factura mas iva? *si* para seguir/*no* para cerrar")
 }while(respuesta == "si")
-
-
