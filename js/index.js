@@ -1,16 +1,16 @@
-let persona = "SANTIAGO GASPAROTTI"
-let domicilio = "ARTURO ALIO 1234"
-let pais = "ARG"
-let nacimiento = "05/11/1996"
-const codigo = "39873433";
+// let persona = "SANTIAGO GASPAROTTI"
+// let domicilio = "ARTURO ALIO 1234"
+// let pais = "ARG"
+// let nacimiento = "05/11/1996"
+// const codigo = "39873433";
 
-let carnet = "Codigo: "+codigo+ " "+
-            "Nombre: "+persona+ " "+
-            "Pais: "+pais+ " "+
-            "Nacimiento: "+nacimiento+ " "+
-            "Domicilio: "+domicilio;
+// let carnet = "Codigo: "+codigo+ " "+
+//             "Nombre: "+persona+ " "+
+//             "Pais: "+pais+ " "+
+//             "Nacimiento: "+nacimiento+ " "+
+//             "Domicilio: "+domicilio;
 
-console.log(carnet)
+// console.log(carnet)
 
 
 // let registroUsuario = prompt("ingresa nombre de usuario");
@@ -47,14 +47,14 @@ console.log(carnet)
 
 //ejemplo 01 ciclo
 
-for (let i = 1; i <=15; i++) {
-    let Nombre = prompt("Ingrese su nombre para registrarse en nuestro sitio web")
-    alert("Hola " + Nombre + " sos el registro Nº " + i + " Muchas gracias por elegir nuestro sitio web")
-    if (i == 10) {
-        alert("No hay mas cupos para registrarse")
-        break
-    }
-}
+// for (let i = 1; i <=15; i++) {
+//     let Nombre = prompt("Ingrese su nombre para registrarse en nuestro sitio web")
+//     alert("Hola " + Nombre + " sos el registro Nº " + i + " Muchas gracias por elegir nuestro sitio web")
+//     if (i == 10) {
+//         alert("No hay mas cupos para registrarse")
+//         break
+//     }
+// }
 
 //WHILE
 
@@ -91,3 +91,94 @@ for (let i = 1; i <=15; i++) {
 // } else {
 //     console.log ("respuesta incorrecta");
 // }
+
+//FUNCIONES
+
+
+// function presentacion() {
+//     console.log("¡Hola, bienvenidos a nuestro sitio web!. ¿como te llamas?");
+// }
+
+// presentacion();
+
+
+
+
+// function presentacion(){
+//     let nombreIngresado   = prompt("¡Hola, bienvenidos a nuestro sitio web!. ¿como te llamas?");
+//     alert("Encantados de conocerte " + nombreIngresado + ", que disfrutes de nuestro sitio web");
+// } 
+
+function suma(primerNumero, segundoNumero)
+{
+    return primerNumero + segundoNumero
+}
+
+function resta(primerNumero, segundoNumero)
+{
+    return primerNumero - segundoNumero
+}
+
+function multiplicar(primerNumero, segundoNumero)
+{
+    return primerNumero * segundoNumero
+}
+
+function dividir(primerNumero, segundoNumero)
+{
+    return primerNumero / segundoNumero
+}
+
+function mostrar(mensaje, resultado)
+{
+    console.log(mensaje, resultado)
+}
+
+function pedirNumeroUno(numero)
+{
+    numero = Number(prompt("Ingrese un valor, seguido de enter ingrese otro valor para realizar la ecuacion: "))
+    return numero
+}
+
+function pedirNumeroDos(numero)
+{
+    numero = Number(prompt("Ingrese aqui el siguien valor para luego elegir la ecuacion"))
+    return numero
+}
+
+let respuesta
+
+do{
+
+    console.log("numeros para la ecuacion: ")
+    numeroA = pedirNumeroUno()
+    numeroB = pedirNumeroDos()
+
+    let operacion = prompt("Operaciones que puede realizar, elija una de ellas: suma, resta, multiplicar o dividir")
+
+
+switch(operacion)
+
+{
+    case "suma":
+        let resultadoSuma = suma (numeroA, numeroB)
+        mostrar("El resultado de la suma es: ", resultadoSuma)
+        break;
+    case "resta":
+        let resultadoResta = resta(numeroA, numeroB)
+        mostrar("\no El resultado de la resta es ", resultadoResta )
+        break;
+    case "multiplicar":
+        let resultadoMultiplicar = multiplicar(numeroA, numeroB)
+        mostrar("\no El resultado de la multiplicacion es: ", resultadoMultiplicar)
+        break;
+    case "dividir":
+        let resultadoDividir = dividir(numeroA, numeroB)
+        mostrar("\no El resultado de la division es: ", resultadoDividir)
+        break;
+}
+
+respuesta = prompt("¿Desea continuar? *si* para seguir/*no* para cerrar")
+}while(respuesta == "si")
+
+
