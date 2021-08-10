@@ -211,15 +211,50 @@
 // respuesta = prompt("¿Desea realizar otra consulta de factura mas iva? *si* para seguir/*no* para cerrar")
 // }while(respuesta == "si")
 
-function Seoane (nombre, direccion, rubro, desde, propietario){
-    this.nombre = nombre;
-    this.direccion = direccion;
-    this.rubro = rubro;
-    this.desde = desde;
-    this.propietario = propietario;
-}
+//OBJETOS
 
-const seoane = new Seoane ("Seoane","Mar del Plata","joyeria","2015","Angela");
+// function Seoane (nombre, direccion, rubro, desde, propietario){
+//     this.nombre = nombre;
+//     this.direccion = direccion;
+//     this.rubro = rubro;
+//     this.desde = desde;
+//     this.propietario = propietario;
+// }
 
-console.log(seoane);
+// const seoane = new Seoane ("Seoane","Mar del Plata","joyeria","2015","Angela");
 
+// console.log(seoane);
+
+//STORAGE
+
+// let comidas = localStorage.getItem("comidas");
+
+// if (comidas == null) {
+//     for(let i = 0; i < 5; i++){
+//         menubar.push(prompt("Ingrese comida"));
+//     }
+//     localStorage.setItem("comidas",menu);
+// } else { //SI TIENE DATOS, SI EL localStorage TIENE VALOR
+//    let menu = " ";
+//    let arrayComidas = comidas.split(",");
+
+//     for (const nombreComida of arrayComidas){
+//        menu = menu + nombreComida + ("\n");
+//     }
+//    alert(menu);
+// }
+
+//ARRAY
+
+const producto = ["anillo", "cadena", "pulcera", "dijes",];
+
+const productoOtros = ("oro");
+
+producto.push('aros')
+producto.push('dijes')
+producto.push('plata')
+
+
+const todosLosProductos = producto.concat(productoOtros);
+
+console.log(todosLosProductos)
