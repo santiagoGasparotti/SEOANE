@@ -246,15 +246,34 @@
 
 //ARRAY
 
-const producto = ["anillo", "cadena", "pulcera", "dijes",];
+// const producto = ["anillo", "cadena", "pulcera", "dijes",];
 
-const productoOtros = ("oro");
+// const productoOtros = ("oro");
 
-producto.push('aros')
-producto.push('dijes')
-producto.push('plata')
+// producto.push('aros')
+// producto.push('dijes')
+// producto.push('plata')
 
 
-const todosLosProductos = producto.concat(productoOtros);
+// const todosLosProductos = producto.concat(productoOtros);
 
-console.log(todosLosProductos)
+// console.log(todosLosProductos)
+
+//ARRAY OBJETO
+
+const producto = [
+    {
+        id: "anillo",
+        nombre: "fresha",
+        material: "oro",
+        diseño: "unico"
+    },
+    {
+        id: "aros",
+        nombre: "persa",
+        material: "plata",
+        deseño: "importado"
+    },
+]
+
+console.log(producto);
