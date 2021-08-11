@@ -65,7 +65,7 @@
 // let repetir = false;
 // do{
 //     console.log("Solo una vez!!");
-   
+
 // }   while(repetir)
 
 //SWITCH
@@ -173,11 +173,11 @@
 
 //     console.log("Precio de factura mas IVA: ")
 //     numeroA = pedirNumeroUno()
-    
-    // let operacion = prompt("Operaciones que puede realizar, elija una de ellas: suma, resta, multiplicar o dividir")     
-    // let operacion = prompt("Ingrese la palabra *iva* para confirmar la operacion")     
 
-    // numeroB = pedirNumeroDos()
+// let operacion = prompt("Operaciones que puede realizar, elija una de ellas: suma, resta, multiplicar o dividir")     
+// let operacion = prompt("Ingrese la palabra *iva* para confirmar la operacion")     
+
+// numeroB = pedirNumeroDos()
 
 // switch(operacion)
 
@@ -246,7 +246,7 @@
 
 //ARRAY
 
-// const producto = ["anillo", "cadena", "pulcera", "dijes",];
+// const producto = ["anillo", "cadena", "pulcera", "dijes", ];
 
 // const productoOtros = ("oro");
 
@@ -258,6 +258,19 @@
 // const todosLosProductos = producto.concat(productoOtros);
 
 // console.log(todosLosProductos)
+let nuevosproductos = []
+let productos = localStorage.getItem("productos")
+if (!productos) {
+    for (let i = 0; i < 5; i++) {
+        let producto = prompt("Ingrese producto")
+        nuevosproductos.push(producto)
+    }
+    localStorage.setItem("productos", nuevosproductos)
+} else {
+    alert(`sus productos son ${productos}`)
+}
+
+
 
 //ARRAY OBJETO
 
@@ -278,13 +291,13 @@
 
 // console.log(producto);
 
-const joyas = ["Aros", "Anillos", "Cadenas", "Pulceras", "dijes",]
+// const joyas = ["Aros", "Anillos", "Cadenas", "Pulceras", "dijes",]
 
-let contenedor = document.getElementById("joyeria")
+// let contenedor = document.getElementById("joyeria")
 
-for (const nombre of joyas) {
-    let li = document.createElement("li");
-    
-    li.innerHTML = nombre;
-    contenedor.appendChild(li);
-}
+// for (const nombre of joyas) {
+//     let li = document.createElement("li");
+
+//     li.innerHTML = nombre;
+//     contenedor.appendChild(li);
+// }
