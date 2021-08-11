@@ -261,19 +261,30 @@
 
 //ARRAY OBJETO
 
-const producto = [
-    {
-        id: "anillo",
-        nombre: "fresha",
-        material: "oro",
-        diseño: "unico"
-    },
-    {
-        id: "aros",
-        nombre: "persa",
-        material: "plata",
-        deseño: "importado"
-    },
-]
+// const producto = [
+//     {
+//         id: "anillo",
+//         nombre: "fresha",
+//         material: "oro",
+//         diseño: "unico"
+//     },
+//     {
+//         id: "aros",
+//         nombre: "persa",
+//         material: "plata",
+//         deseño: "importado"
+//     },
+// ]
 
-console.log(producto);
+// console.log(producto);
+
+const joyas = ["Aros", "Anillos", "Cadenas", "Pulceras", "dijes",]
+
+let contenedor = document.getElementById("joyeria")
+
+for (const nombre of joyas) {
+    let li = document.createElement("li");
+    
+    li.innerHTML = nombre;
+    contenedor.appendChild(li);
+}
