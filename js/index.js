@@ -258,21 +258,22 @@
 // const todosLosProductos = producto.concat(productoOtros);
 
 // console.log(todosLosProductos)
-let nuevosproductos = []
-let productos = localStorage.getItem("productos")
-if (!productos) {
-    for (let i = 0; i < 5; i++) {
-        let producto = prompt("Ingrese producto")
-        nuevosproductos.push(producto)
-    }
-    localStorage.setItem("productos", nuevosproductos)
-} else {
-    alert(`sus productos son ${productos}`)
-}
+
+// let nuevosproductos = []
+// let productos = localStorage.getItem("productos")
+// if (!productos) {
+//     for (let i = 0; i < 5; i++) {
+//         let producto = prompt("Ingrese producto")
+//         nuevosproductos.push(producto)
+//     }
+//     localStorage.setItem("productos", nuevosproductos)
+// } else {
+//     alert(`sus productos son ${productos}`)
+// }
 
 
 
-//ARRAY OBJETO
+// ARRAY OBJETO
 
 // const producto = [
 //     {
@@ -301,3 +302,42 @@ if (!productos) {
 //     li.innerHTML = nombre;
 //     contenedor.appendChild(li);
 // }
+
+class Producto {
+    constructor(nombre, precio, img) {
+        this.nombre = nombre.toLowerCase(),
+            this.precio = Number(precio),
+            this.img = img
+    }
+}
+
+const carrito =[];
+
+function baseDeDatos(){
+    let entrada = true
+    do{
+        let nombre = prompt('ingresar un producto');
+        let precio = prompt('ingresar su precio');
+        let img = 'https://www.google.com/search?q=joyas&rlz=1C1SQJL_esAR862AR862&sxsrf=ALeKk0168HNmIpHYAMp5cjPFXQ1D9XrV_A:1628890515114&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj1up-E-q7yAhUOpJUCHTsPDYUQ_AUoAXoECAIQAw&biw=1600&bih=789#imgrc=vxsBFruLcMF0RM'
+
+        let producto1 = new Producto(nombre,precio,img);
+        carrito.push(producto1)
+        
+        entrada = confirm('quieres seguir ingresando productos?')
+    }while(entrada);
+
+}
+
+baseDeDatos()
+console.table(carrito)
+
+
+function comprar(producto){
+    let miCompra = carrito.find(element => element.nombre == producto.toLowerCase())
+    return miCompra
+}
+
+let busqueda = prompt('Que productos quieres comprar?')
+let comprarAlgo = comprar(busqueda)
+
+console.log(comprarAlgo)
