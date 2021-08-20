@@ -303,41 +303,167 @@
 //     contenedor.appendChild(li);
 // }
 
-class Producto {
-    constructor(nombre, precio, img) {
-        this.nombre = nombre.toLowerCase(),
-            this.precio = Number(precio),
-            this.img = img
-    }
-}
+// class Producto {
+//     constructor(nombre, precio, img) {
+//         this.nombre = nombre.toLowerCase(),
+//             this.precio = Number(precio),
+//             this.img = img
+//     }
+// }
 
-const carrito =[];
+// const carrito =[];
 
-function baseDeDatos(){
-    let entrada = true
-    do{
-        let nombre = prompt('ingresar un producto');
-        let precio = prompt('ingresar su precio');
-        let img = 'https://www.google.com/search?q=joyas&rlz=1C1SQJL_esAR862AR862&sxsrf=ALeKk0168HNmIpHYAMp5cjPFXQ1D9XrV_A:1628890515114&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj1up-E-q7yAhUOpJUCHTsPDYUQ_AUoAXoECAIQAw&biw=1600&bih=789#imgrc=vxsBFruLcMF0RM'
+// function baseDeDatos(){
+//     let entrada = true
+//     do{
+//         let nombre = prompt('ingresar un producto');
+//         let precio = prompt('ingresar su precio');
+//         let img = 'https://www.google.com/search?q=joyas&rlz=1C1SQJL_esAR862AR862&sxsrf=ALeKk0168HNmIpHYAMp5cjPFXQ1D9XrV_A:1628890515114&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj1up-E-q7yAhUOpJUCHTsPDYUQ_AUoAXoECAIQAw&biw=1600&bih=789#imgrc=vxsBFruLcMF0RM'
 
-        let producto1 = new Producto(nombre,precio,img);
-        carrito.push(producto1)
+//         let producto1 = new Producto(nombre,precio,img);
+//         carrito.push(producto1)
         
-        entrada = confirm('quieres seguir ingresando productos?')
-    }while(entrada);
+//         entrada = confirm('quieres seguir ingresando productos?')
+//     }while(entrada);
 
-}
+// }
 
-baseDeDatos()
-console.table(carrito)
+// baseDeDatos()
+// console.table(carrito)
 
 
-function comprar(producto){
-    let miCompra = carrito.find(element => element.nombre == producto.toLowerCase())
-    return miCompra
-}
+// function comprar(producto){
+//     let miCompra = carrito.find(element => element.nombre == producto.toLowerCase())
+//     return miCompra
+// }
 
-let busqueda = prompt('Que productos quieres comprar?')
-let comprarAlgo = comprar(busqueda)
+// let busqueda = prompt('Que productos quieres comprar?')
+// let comprarAlgo = comprar(busqueda)
 
-console.log(comprarAlgo)
+// console.log(comprarAlgo)
+
+
+// PROYECTO REAL
+const productos = [
+    {
+        nombre:'Anillo',
+        descripcion: 'Lorem ipsum dolor sit.',
+        precio: 5500,
+        id:1,
+        cantidad: 1,
+    },
+    {
+        nombre:'Aros',
+        descripcion: 'Lorem ipsum dolor sit.',
+        precio: 2000,
+        id:2,
+        cantidad: 1,
+    },
+    {
+        nombre:'Collar',
+        descripcion: 'Lorem ipsum dolor sit.',
+        precio: 8000,
+        id:3,
+        cantidad: 1,
+    },
+    {
+        nombre:'Dije',
+        descripcion: 'Lorem ipsum dolor sit.',
+        precio: 2900,
+        id:4,
+        cantidad: 1,
+    },
+    {
+        nombre:'Perla',
+        descripcion: 'Lorem ipsum dolor sit.',
+        precio: 7500,
+        id:5,
+        cantidad: 1,
+    },
+    {
+        nombre:'Alaja',
+        descripcion: 'Lorem ipsum dolor sit.',
+        precio: 15000,
+        id:6,
+        cantidad: 1,
+    },
+    ]
+    
+    
+    // MIS VARIABLES GLOBALES
+    let container = document.querySelector('.container')
+    let divCarrito = document.querySelector('.modal-body')
+    const carrito = []
+    
+    
+    
+    // FUNCION PARA AGREGAR PRODUCTOS AL HTML
+
+    function pintarCards(){
+        for (const element of productos) {
+            let div = document.createElement('div')
+            div.className = 'col-sm-4'
+            div.innerHTML = `<div class="card">
+            <img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">${element.nombre}</h5>
+            <p class="card-text">${element.descripcion}</p>
+            <p>$${element.precio}</p>
+            <button id="${element.id}" class="btn btn-dark">Agregar al carrito</button>
+            </div>
+            </div>`
+            
+            container.appendChild(div)
+            
+            let button = document.getElementById(`${element.id}`)
+            button.onclick = agregarAlCarrito
+        }
+    }
+    
+    pintarCards()
+    
+    
+    function agregarAlCarrito(){
+        const seleccionado = productos.find(producto => producto.id == this.id);
+        const existe = carrito.find(producto => producto.id == this.id)
+        let posicion = carrito.indexOf(existe)
+    
+    
+        
+        if (carrito.length == 0){
+            
+            carrito.push(seleccionado)
+            
+        }else if(existe == undefined){
+            
+            carrito.push(seleccionado)
+            
+        }else{
+            
+            carrito[posicion].cantidad += 1
+            
+        }
+        
+        console.log(carrito)
+    
+        divCarrito.innerHTML = ``
+    
+    
+        for (const element of carrito) {
+            let div = document.createElement('div')
+            div.innerHTML = `
+            <h4>${element.nombre}</h4>
+            <p>$${element.precio}</p>
+            <p>Cantidad :${element.cantidad}</p>
+            <button class="btn btn-danger">X</button>`
+    
+            divCarrito.appendChild(div)
+    
+            
+            
+        }
+    
+    
+    }
+    
+    
