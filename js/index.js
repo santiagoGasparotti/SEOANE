@@ -469,20 +469,49 @@ const productos = [
 
     }
     
+    // $(document).ready(
+    //     function (){
+    //         if ("carrito" in localStorage){
+    //             const data = JSON.parse(localStorage.getItem("carrito"))
+    //             for(const dato of data){
+    //                 console.log(productos[nombre])
+    //                 carrito.push(productos[nombre],productos[descripcion],productos[precio],productos[id],productos[cantidad])
+    //             }
+    //             console.log(carrito)
+    //             console.log(productos[nombre])
+
+    //             agregarAlCarrito()
+    //         }
+    //     }
+    // )
+
     $(document).ready(
+
         function (){
+
             if ("carrito" in localStorage){
+
                 const data = JSON.parse(localStorage.getItem("carrito"))
+
                 for(const dato of data){
-                    console.log(productos[nombre])
-                    carrito.push(productos[nombre],productos[descripcion],productos[precio],productos[id],productos[cantidad])
+
+                    //console.log(dato[nombre])
+
+                    carrito.push(dato)
+
                 }
+
                 console.log(carrito)
-                console.log(productos[nombre])
+
+                //console.log(productos[nombre])
+
+
 
                 agregarAlCarrito()
-            }
-        }
-    )
 
+            }
+
+        }
+
+    )
     
