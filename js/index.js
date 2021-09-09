@@ -515,3 +515,16 @@ const productos = [
 
     )
     
+
+    // ANIMACIONES *****************************************************************
+
+    //Agregamos un botón y un div con jQuery
+$("section").prepend('<button id="btn1">Ver nuestras Ofertas</button>');
+$("section").prepend(`<div id="div1" style="height: 120px">
+                        <h3>¡Nuevas Ofertas!</h3>
+                        <h4>Los mejores productos</h4>
+                    </div>`);
+//Usamos toggle sobre div1 en respuesta al click del botòn btn1
+$("#btn1").click(() => { 
+    $("#div1").toggle("fast");
+});
