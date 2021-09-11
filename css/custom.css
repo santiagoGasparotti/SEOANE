@@ -5,15 +5,22 @@
 .button {
   background-color: #E06DAD; }
 
-div h3 {
-  background-color: red; }
-
 div.navbar__right {
   display: flex;
   position: relative;
   font-size: 1rem;
   justify-content: space-between;
   padding: 1rem; }
+
+#div1 {
+  display: none;
+  background-color: white; }
+
+div h3 {
+  background-color: white; }
+
+.sectionBotoom {
+  padding: 30px 0px; }
 
 @media only screen and (max-width: 400px) {
   .width {
