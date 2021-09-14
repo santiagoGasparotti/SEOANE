@@ -394,9 +394,7 @@ const productos = [
     let container = document.querySelector('.container')
     let divCarrito = document.querySelector('.modal-body')
     const carrito = []
-    
-    
-    
+   
     // FUNCION PARA AGREGAR PRODUCTOS AL HTML
 
     function pintarCards(){
@@ -422,23 +420,18 @@ const productos = [
     
     pintarCards()
     
-    
+    let carritoTraido = []
     function agregarAlCarrito(){
+
         const seleccionado = productos.find(producto => producto.id == this.id);
         const existe = carrito.find(producto => producto.id == this.id)
         let posicion = carrito.indexOf(existe)
     
-    
-        
-        if (carrito.length == 0){
+        if (carrito.length == 0 || existe == undefined){
             
             carrito.push(seleccionado)
             
-        }else if(existe == undefined){
-            
-            carrito.push(seleccionado)
-            
-        }else{
+        } else{
             
             carrito[posicion].cantidad += 1
             
@@ -446,68 +439,49 @@ const productos = [
         
         console.log(carrito)
 
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-
-        divCarrito.innerHTML = ``
-    
-    
-        for (const element of carrito) {
-            let div = document.createElement('div')
-            div.innerHTML = `
-            <h4>${element.nombre}</h4>
-            <p>$${element.precio}</p>
-            <p>Cantidad :${element.cantidad}</p>
-            <button class="btn btn-danger">X</button>`
-    
-            divCarrito.appendChild(div)
-    
-            
-            
+        if (carrito != null){
+            localStorage.setItem("carrito", JSON.stringify(carrito))
         }
-    
-    
-
+        
+        divCarrito.innerHTML = ``
+        pintarCarrito()
     }
-    
-    // $(document).ready(
-    //     function (){
-    //         if ("carrito" in localStorage){
-    //             const data = JSON.parse(localStorage.getItem("carrito"))
-    //             for(const dato of data){
-    //                 console.log(productos[nombre])
-    //                 carrito.push(productos[nombre],productos[descripcion],productos[precio],productos[id],productos[cantidad])
-    //             }
-    //             console.log(carrito)
-    //             console.log(productos[nombre])
 
-    //             agregarAlCarrito()
-    //         }
-    //     }
-    // )
+function pintarCarrito(){
+    if (localStorage.getItem("carrito")){
+        carritoTraido = JSON.parse(localStorage.getItem("carrito"));
+        console.log(carritoTraido)
+    }    
+
+    for (const element of carritoTraido) {
+        let div = document.createElement('div')
+        div.innerHTML = `
+        <h4>${element.nombre}</h4>
+        <p>$${element.precio}</p>
+        <p>Cantidad :${element.cantidad}</p>
+        <button class="btn btn-danger">X</button>`
+
+        divCarrito.appendChild(div)
+           
+    }
+}
 
     $(document).ready(
 
         function (){
 
-            if ("carrito" in localStorage){
+            if (localStorage.getItem("carrito")){
 
-                const data = JSON.parse(localStorage.getItem("carrito"))
-
-                for(const dato of data){
-
-                    //console.log(dato[nombre])
-
-                    carrito.push(dato)
-
-                }
-
-                console.log(carrito)
-
-                //console.log(productos[nombre])
+                carritoTraido = JSON.parse(localStorage.getItem("carrito"))
 
 
+                console.log(carritoTraido)
 
-                agregarAlCarrito()
+               
+
+
+                pintarCarrito()
+                
 
             }
 
@@ -527,4 +501,23 @@ $("section").prepend(`<div id="div1" style="height: 120px">
 //Usamos toggle sobre div1 en respuesta al click del botòn btn1
 $("#btn1").click(() => { 
     $("#div1").toggle("fast");
+});
+
+
+
+//Declaramos la url que vamos a usar para el GET
+const URLGET   = "https://jsonplaceholder.typicode.com/posts"
+//Declaramos la información a enviar
+const infoPost =  { nombre: "Ana", profesion: "Programadora" }
+//Agregamos un botón con jQuery
+$("body").prepend('<button id="btn1">POST</button>');
+//Escuchamos el evento click del botón agregado
+$("#btn1").click(() => { 
+    $.post(URLGET, infoPost ,(respuesta, estado) => {
+        if(estado === "success"){
+            $("body").prepend(`<div>
+Guardado:${respuesta.nombre}
+</div>`);
+        }  
+    });
 });
