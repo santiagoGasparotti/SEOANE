@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="eS">
+<html lang="es">
 <head>
+
+
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/custom.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>SEOANE</title>
 </head>
-
 <body>
     
     <nav class=" navbar navbar-expand-lg navbar-light" style="background-color: #ffffff;">
@@ -50,67 +54,273 @@
         </div>
       </nav>
 
-    <header>
-
-        <nav class="navbar navbar-light bg-light justify-content-between">
-            <a class="navbar-brand"></a>
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                carrito
-              </button>
-        </nav>
-        
+      <header>
+        <div class="container">
+            <h1 class="text-center">TIENDA</h1>
+            <hr>
+        </div>
     </header>
+       <!-- START SECTION STORE -->
+    <section class="store">
+      <div class="container">
+          <div class="items">
+              <div class="row">
 
+                  <div class="col-12 col-md-6">
+                      <div class="item shadow mb-4">
+                          <h3 class="item-title">Anillos de micro pave</h3>
+                          <img class="item-image" src="img/anilllos.jpg">
 
-    <div id="" class="text-center sectionBotoom">
-      <section>
-      
-      </section>
-    </div>
+                          <div class="item-details">
+                              <h4 class="item-price">$5500</h4>
+                              <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                      <div class="item shadow mb-4">
+                          <h3 class="item-title">Aros de Plata 925 y cristal</h3>
 
+                          <img class="item-image" src="img/aros.jfif">
 
-<div class="container card-group">
+                          <div class="item-details">
+                              <h4 class="item-price">$2000</h4>
+                              <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-</div>
+              <div class="row">
+                  <div class="col-12 col-md-6">
+                      <div class="item shadow mb-4">
+                          <h3 class="item-title">Collar</h3>
 
+                          <img class="item-image" src="img/photo5.jpg">
 
+                          <div class="item-details">
+                              <h4 class="item-price">$8000</h4>
+                              <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                      <div class="item shadow mb-4">
+                          <h3 class="item-title">Dije</h3>
 
+                          <img class="item-image" src="img/dijes.jfif">
 
+                          <div class="item-details">
+                              <h4 class="item-price">$3000</h4>
+                              <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12 col-md-6">
+                      <div class="item shadow mb-4">
+                          <h3 class="item-title">Pulseras micro pave y Plata 925</h3>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tu carrito</h5>
-        </div>
-        <div class="modal-body">
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-dark" data-dismiss="modal">Seguir comprando</button>
-          <button type="button" class="btn btn-dark">Confirmar compra</button>
-        </div>
+                          <img class="item-image" src="img/pulseras.jfif">
+                          <div class="item-details">
+                              <h4 class="item-price">$7500</h4>
+                              <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                      <div class="item shadow mb-4">
+                          <h3 class="item-title">Esclavas de plata</h3>
+
+                          <img class="item-image" src="img/esclavas.jfif">
+                          <div class="item-details">
+                              <h4 class="item-price">$15000</h4>
+                              <button class="item-button btn btn-primary addToCart">AÑADIR AL CARRITO</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
+  </section>
+  <!-- END SECTION STORE -->
+  <!-- START SECTION SHOPPING CART -->
+  <section class="shopping-cart">
+      <div class="container">
+          <h1 class="text-center">CARRITO</h1>
+          <hr>
+          <div class="row">
+              <div class="col-6">
+                  <div class="shopping-cart-header">
+                      <h6>Producto</h6>
+                  </div>
+              </div>
+              <div class="col-2">
+                  <div class="shopping-cart-header">
+                      <h6 class="text-truncate">Precio</h6>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div class="shopping-cart-header">
+                      <h6>Cantidad</h6>
+                  </div>
+              </div>
+          </div>
+          <!-- ? START SHOPPING CART ITEMS -->
+          <div class="shopping-cart-items shoppingCartItemsContainer">
+          </div>
+          <!-- ? END SHOPPING CART ITEMS -->
+
+          <!-- START TOTAL -->
+          <div class="row">
+              <div class="col-12">
+                  <div class="shopping-cart-total d-flex align-items-center">
+                      <p class="mb-0">Total</p>
+                      <p class="ml-4 mb-0 shoppingCartTotal">$0</p>
+                      <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                          data-delay="2000">
+                          <div class="toast-header">
+                              <span>✅</span>
+                              <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="toast-body text-white">
+                              Se aumentó correctamente la cantidad
+                          </div>
+                      </div>
+                      <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                          data-target="#comprarModal">Comprar</button>
+                  </div>
+              </div>
+          </div>
+
+          <!-- END TOTAL -->
+
+          <!-- START MODAL COMPRA -->
+          <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <p>Pronto recibirá su pedido</p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- END MODAL COMPRA -->
+
+
+      </div>
+
+  </section>
+  <!-- END SECTION SHOPPING CART -->
+
+
+  <!-- START FOOTER -->
+  <footer id="contacto" class="text-white pt-5 pb-4" style="background-color: #D0D0D0;">
+
+    <div class="container text-lg-start text-md-left">
+
+        <div class="row text-start text-md-left">
+
+            <div class="col-md-4 col-lg-5 col-xl-6 mx-auto mt-3">
+                <a href="index.html">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning"><img class="w-25" src="img/SJ2.svg"
+                            alt=""></h5>
+                </a>
+                <p class="textFooter" style="color: #3C3C3C;">
+                    <a href="mailto:petraventas3@gmail.com" style="text-decoration: none;" i class="mr-3">
+                        <font color="#3C3C3C"><b>E-mail:</b> Petraventas3@gmail.com</font>
+                    </a>
+                </p>
+                <p class="textFooter mr-3" style="color: #3C3C3C;">
+
+                    <b>Direccíon:</b> Villa Rosa, Pilas,Bs.as. G.b.a. Norte
+
+                </p>
+                <p class="" style="color: #3C3C3C;">
+                    <b>Teléfono:</b> (+54) 1151547001/ (+54) 1150259001
+                </p>
+
+                <h5 class="fs-3 text" style="color: #000000;">
+                    Encontranos en nuestras redes:
+                </h5>
+                <p class="col-xl-7 mx-auto mt-3 iconosFoteer">
+                    <a href="https://www.instagram.com/pisos_petra/" class="btn-floating bnt-5m"
+                        style="color:#387A60; font-size: 33px;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=541151547001" class="btn-floating bnt-sm"
+                        style="color:#387A60; font-size: 33px;"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:marielagimenez16@outlook.com" class="btn-floating btn-5m"
+                        style="color:#387A60; font-size: 33px;"><i class="fas fa-envelope"></i></a>
+                </p>
+
+            </div>
+
+            <div class="col-md-4 col-lg-5 col-xl-5 mx-auto mt-3 marginfooter">
+                <h5 class="h3 mb-4 font-weight-bold" style="color: #3D3D3D;">
+                    <b class="hvr-underline-from-left fs-1 text ">Contáctenos</b></h5>
+                <!-- text-uppercase -->
+                <p class="width100">
+                    <label class="width100"><input class="width100" type="text" name="name"
+                            placeholder="  Nombre y apellido:" /></label>
+                </p>
+                <p class="width100">
+                    <label class="width100"><input class="width100" type="phone" name="phone"
+                            placeholder="  Teléfono:" /></label>
+                </p>
+                <p class="width100">
+                    <label class="width100"><input class="width100" type="email" name="email"
+                            placeholder="  Email:"></label>
+                </p>
+                <p class="width100">
+                    <label class="width100"><textarea class="width100" name="comentario" id="" cols="30" rows="3"
+                            placeholder="  Tu mensaje:"></textarea></label>
+                </p>
+                <div class="col-12 text-center mt-5">
+                    <input class="btn text-white fs-4 text " style="background-color: #3D7A5D;" type="submit" value="Enviar">
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="mb-4">
+
     </div>
-  </div>
 
 
+</footer>
+  <!-- END FOOTER -->
+      
 
 
-
-
-<!-- mi script -->
-<script src="index.js"></script>
+    <!-- mi script -->
+<script src="./js/index.js"></script>
 <!-- links bootstrap -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
 
-<script src="js/index.js"></script>
+
 </body>
 </html>
+
+    
